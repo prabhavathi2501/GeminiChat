@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+build and deploy your own ChatGPT-style app using ReactJS and the Gemini API on Netlify.  learn how to set up a React project, integrate AI-powered chat using Gemini, and deploy it for  on Netlify.
+deploy URL:https://geminichatgpt.netlify.app/
