@@ -7,39 +7,39 @@ import { useState } from "react";
 import { dataContext } from '../context/UserContext';
 
 function Sidebar() {
-  const[extend,setExtend]=useState(false);
-  const {sent,prevPrompt} = useContext(dataContext)
+  const [extend, setExtend] = useState(false);
+  const { sent, prevPrompt,newChat } = useContext(dataContext)
 
-    return (
+  return <>
+    <div className='sidebar'>
+      <GiHamburgerMenu id="ham" onClick={() => {
+        setExtend(prev => !prev)
+        console.log(extend);
+      }} />
+      <div className='newchat' onClick={()=>{
+        newChat()
+      }}>
+        <FaPlus />
+        {extend ? <p>NewChat</p> : null}
 
-        <div className='sidebar'>
-            <GiHamburgerMenu id="ham"  onClick={()=>{
-                setExtend(prev=>!prev)
-                console.log(extend);
-            }}/>
-            <div className='newchat'>
-                <FaPlus />
-              {extend? <p>NewChat</p>:null}  
+      </div>
 
-            </div>
-            
-             {/* {prevPrompt.map((item,index)=>{
-                    return(
-                        <div className='recent'>
-                        <FaRegMessage />
-                      {extend?<p>{item}</p>:null}  
-        
-                    </div>
-                    )
-                    })} */}
-            
-            <div className='recent'>
-                <FaRegMessage />
-              {extend?<p>who are you</p>:null}  
+      {/* {prevPrompt.map((item, index) => {
+        return (
+          <div className='recent'>
+            <FaRegMessage />
+            {extend ? <p>{item}</p> : null}
+          </div>
+        )
+      })} */}
 
-            </div> 
-        </div>
-    )
+      <div className='recent'>
+        <FaRegMessage />
+        {extend ? <p>hello</p> : null}
+
+      </div>
+    </div>
+  </>
 }
 
 export default Sidebar

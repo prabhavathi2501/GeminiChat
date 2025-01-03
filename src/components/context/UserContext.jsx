@@ -9,7 +9,14 @@ function UserContext({children}) {
     const[loading,setLoading]=useState(false);
     const[resultData,setResultData]=useState("");
     const[recentPrompt,setRecentPrompt]=useState("");
-    const[prevPrompt,setPrevPrompt]=useState([])
+    const[prevPrompt,setPrevPrompt] = useState([]);
+
+
+
+    function newChat(){
+      setShowResult(false);
+      setLoading(false);
+    }
    
 async  function sent(input){
     setResultData("")
@@ -35,7 +42,8 @@ async  function sent(input){
     showResult,
     setShowResult,
     recentPrompt,
-    setRecentPrompt
+    setRecentPrompt,
+    newChat
     }
   return <>
   <dataContext.Provider value={data}>

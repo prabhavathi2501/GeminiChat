@@ -137,3 +137,11 @@
         background-position: 800px 0px;
     }
 }
+@media (max-width:800px) {
+    .heading{
+        font-size: 1.5vmax;
+        text-align: center;
+        padding: 10px;
+    }
+    
+}
